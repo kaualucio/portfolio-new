@@ -31,35 +31,31 @@ const translations = {
       contact: 'contato',
     },
     about: [
-      'Meu nome é Kauã Lúcio. Programo desde 2018 — três desses seis anos como profissional. Hoje trabalho como desenvolvedor web na Colina Tech, onde boa parte do dia ainda passa por WordPress e NextJs. Mas minha stack principal é TypeScript, Node.js, Next.js e Tanstack no presente; Java no backend em horizonte próximo.',
-      'A migração para backend Java é intencional. À noite é onde concentro os estudos e a criação de projetos pessoais, em paralelo ao trabalho — construindo fundação nova enquanto entrego em cima da antiga.',
+      'Meu nome é Kauã Lúcio. Programo desde 2018 — três desses seis anos como profissional. Hoje trabalho como desenvolvedor web na Colina Tech, onde boa parte do dia ainda passa por WordPress e NextJs. Mas minha stack principal é TypeScript, Node.js, Next.js e Tanstack. Mesmo trabalhando com uma stack específica, estou sempre disposto a aprender uma tecnologia nova.',
+      'À noite é onde concentro os estudos e a criação de projetos pessoais, em paralelo ao trabalho — construindo fundação nova enquanto entrego em cima da antiga.',
       'Além de código, sou entusiasta de carreira, mercado tech e investimentos. Conteúdo? Ainda não. Mas estou de olho.',
     ],
     stack: [
       'React, NextJs, TypeScript, Wordpress — o dia a dia',
       'Python e Java (Spring Boot) - quando o problema pede',
       'Postgres, Redis, filas — persistência e assíncrono',
-      'Docker, AWS, Cloudflare — um pouco de infra',
+      'Docker, Cloudflare — um pouco de infra',
       'Vscode, Intellij — ferramenta importa',
     ],
     projects: [
       {
-        name: 'projeto-um',
-        meta: '2026 · ativo',
-        desc: 'Descrição curta. O que é, para quem, por que existe. Uma linha resolve.',
-        stack: ['typescript', 'postgres', 'docker'],
+        name: 'mostru',
+        href: 'https://mostru.unravelstudio.com.br/',
+        meta: '2026 · em desenvolvimento',
+        desc: 'Plataforma SaaS multi-loja para lojistas de moda montarem um catálogo online e receberem pedidos pelo WhatsApp. Painel administrativo, onboarding, planos com cobrança, coleções, cupons e lista de desejos.',
+        stack: ['tanstack start', 'react 19', 'typescript', 'tailwind 4', 'drizzle', 'postgres', 'stripe'],
       },
       {
-        name: 'projeto-dois',
-        meta: '2025 · arquivado',
-        desc: 'Ferramenta de linha de comando para automatizar aquilo que ninguém pediu.',
-        stack: ['go', 'cli'],
-      },
-      {
-        name: 'projeto-três',
-        meta: '2025',
-        desc: 'Experimento com sistemas embarcados e uma placa que quase queimou.',
-        stack: ['rust', 'embedded'],
+        name: 'unravel-tv',
+        href: 'https://tv.unravelstudio.com.br/',
+        meta: '2026',
+        desc: 'Sistema de gerenciamento de anúncios para TVs: usuários fazem upload de mídias, montam playlists e as associam a telas, pareadas via código/QR, que exibem o conteúdo em um player. Painel autenticado e APIs para as TVs registrarem, consultarem status e buscarem a playlist.',
+        stack: ['next.js 16', 'react 19', 'typescript', 'tailwind 4', 'supabase', 'biome'],
       },
     ],
     writing:
@@ -93,35 +89,31 @@ const translations = {
       contact: 'contact',
     },
     about: [
-      'My name is Kauã Lúcio. I have been programming since 2018 — three of those six years professionally. Today I work as a web developer at Colina Tech, where most of my day still runs through WordPress and Next.js. But my main stack is TypeScript, Node.js, Next.js and Tanstack in the present; Java on the backend on the near horizon.',
-      'The move to Java backend is intentional. Nights are where I focus on studying and building personal projects, in parallel with work — laying new foundations while shipping on top of the old one.',
+      'My name is Kauã Lúcio. I have been programming since 2018 — three of those six years professionally. Today I work as a web developer at Colina Tech, where most of my day still runs through WordPress and Next.js. But my main stack is TypeScript, Node.js, Next.js and Tanstack. Even though I work with a specific stack, I am always willing to learn a new technology.',
+      'Nights are where I focus on studying and building personal projects, in parallel with work — laying new foundations while shipping on top of the old one.',
       'Beyond code, I am an enthusiast of career, the tech market and investing. Content? Not yet. But I am watching.',
     ],
     stack: [
       'React, Next.js, TypeScript, WordPress — the day-to-day',
       'Python and Java (Spring Boot) — when the problem asks for it',
       'Postgres, Redis, queues — persistence and async',
-      'Docker, AWS, Cloudflare — a bit of infra',
+      'Docker, Cloudflare — a bit of infra',
       'VSCode, IntelliJ — tools matter',
     ],
     projects: [
       {
-        name: 'project-one',
-        meta: '2026 · active',
-        desc: 'Short description. What it is, who it is for, why it exists. One line solves it.',
-        stack: ['typescript', 'postgres', 'docker'],
+        name: 'mostru',
+        href: 'https://mostru.unravelstudio.com.br/',
+        meta: '2026 · in development',
+        desc: 'Multi-store SaaS platform for fashion retailers to build an online catalog and receive orders via WhatsApp. Admin dashboard, onboarding, paid plans, collections, coupons and wishlist.',
+        stack: ['tanstack start', 'react 19', 'typescript', 'tailwind 4', 'drizzle', 'postgres', 'stripe'],
       },
       {
-        name: 'project-two',
-        meta: '2025 · archived',
-        desc: 'Command-line tool to automate what nobody asked for.',
-        stack: ['go', 'cli'],
-      },
-      {
-        name: 'project-three',
-        meta: '2025',
-        desc: 'Experiment with embedded systems and a board that nearly burned.',
-        stack: ['rust', 'embedded'],
+        name: 'unravel-tv',
+        href: 'https://tv.unravelstudio.com.br/',
+        meta: '2026',
+        desc: 'Ad management system for TVs: users upload media, build playlists and assign them to screens, paired via code/QR, which play the content in a player (/tv). Authenticated dashboard in Portuguese and APIs for TVs to register, report status and fetch their playlist.',
+        stack: ['next.js 16', 'react 19', 'typescript', 'tailwind 4', 'supabase', 'biome'],
       },
     ],
     writing:
@@ -217,10 +209,16 @@ function Home() {
               <h2 id="projects-title">{t.sections.projects}</h2>
             </div>
             <ul className="project-list">
-              {t.projects.map((p, i) => (
+              {t.projects.map((p, i) => {
+                const href = p.href
+                return (
                 <li key={i} className="project">
                   <div className="project__head">
-                    <a className="project__name" href="#">{p.name}</a>
+                    <a
+                      className="project__name"
+                      href={href ?? '#'}
+                      {...(href && { target: '_blank', rel: 'noopener noreferrer' })}
+                    >{p.name}</a>
                     <span className="project__meta">{p.meta}</span>
                   </div>
                   <p className="project__desc">{p.desc}</p>
@@ -230,7 +228,8 @@ function Home() {
                     ))}
                   </div>
                 </li>
-              ))}
+                )
+              })}
             </ul>
           </section>
 
